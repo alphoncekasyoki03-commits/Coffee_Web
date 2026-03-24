@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="progress-bar"></div>
+    <header class="header">
+        <div class="cart-icon" onclick="scrollToCart()">
+            <span id="cart-count">0</span>
+        </div>
+    <h2 class="logo">☕ Alma del Café</h2>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" class="active">Menu</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">=</div>
+</header><section class="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-controls">
+        <input type="text" id="search" placeholder="Search for coffee..." onkeyup="searchMenu()">
+
+        <div class="filters">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('hot')">Hot</button>
+            <button onclick="filterMenu('cold')">Cold</button>
+            <button onclick="filterMenu('special')">Special</button>
+        </div>
+    </div>
+
+    <div class="menu-items">
+
+        <div class="menu-item card" data-category="hot">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Espresso">
+            <div class="card-body">
+                <h3>Espresso</h3>
+                <p>Rich and bold, our espresso is the perfect pick-me-up.</p>
+                <button onclick="addToCart('Espresso',200)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item card" data-category="hot">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cappuccino">
+            <div class="card-body">
+                <h3>Cappuccino</h3>
+                <p>A harmonious blend of espresso, steamed milk, and froth.</p>
+                <button onclick="addToCart('Cappuccino',300)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item card" data-category="hot">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" alt="Latte">
+            <div class="card-body">
+                <h3>Latte</h3>
+                <p>Smooth and creamy, our latte is a coffee lover's dream.</p>
+                <button onclick="addToCart('Latte',350)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item card" data-category="special">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" alt="Mocha">
+            <div class="card-body">
+                <h3>Mocha</h3>
+                <p>A decadent blend of espresso, chocolate, and steamed milk.</p>
+                <button onclick="addToCart('Mocha',400)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item card" data-category="hot">
+            <img src="Americano.jpg" alt="Americano">
+            <div class="card-body">
+                <h3>Americano</h3>
+                <p>Espresso diluted with hot water for a smooth, rich flavor.</p>
+                <button onclick="addToCart('Americano',250)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item card" data-category="cold">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Frappe">
+            <div class="card-body">
+                <h3>Frappe</h3>
+                <p>A refreshing blend of coffee, milk, ice, and syrup, or using an espresso base.</p>
+                <button onclick="addToCart('Frappe',350)">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+    </section><section class="cart">
+        <h2 id="cart-title">Your Order</h2>
+        <ul id="cart-list"></ul>
+        <h3>Total: KES <span id="total">0</span></h3>
+        <button onclick="checkout()" class="btn">Checkout</button>
+    </section><footer>
+        <p>© 2026 Alma del Café</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

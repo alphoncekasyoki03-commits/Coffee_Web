@@ -22,7 +22,11 @@
         <a href="about.html">About</a>
         <a href="menu.html" class="active">Menu</a>
     </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">=</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header><section class="menu">
     <h2 class="section-title">Our Menu</h2>
     <div class="menu-controls">
@@ -101,6 +105,7 @@
     </section><footer>
         <p>© 2026 Alma del Café</p>
     </footer>
+<div id="overlay-bg" onclick="toggleMenu()"></div>
 <script src="script.js"></script>
 </body>
 </html>

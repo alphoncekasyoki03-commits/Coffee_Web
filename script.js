@@ -1,7 +1,14 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+const menuBtn = document.querySelector('.menu-toggle');
+
 function toggleMenu() {
-  document.getElementById('nav').classList.toggle('show');
+  const nav = document.getElementById('nav');
+  const overlay = document.getElementById('overlay-bg');
+
+  nav.classList.toggle('show');
+  overlay.classList.toggle('show');
+  menuBtn.classList.toggle('active');
 }
 
 function addToCart(name, price) {

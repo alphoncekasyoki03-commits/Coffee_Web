@@ -170,22 +170,60 @@ document.querySelectorAll('.menu-item, .section-title').forEach(el => {
   observer.observe(el);
 });
 
-
-// Page Loader
-document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    loader.style.opacity = '0';
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 1000);
-  }
-});
-
 // Scroll Progress Bar
 window.addEventListener('scroll', () => {
   const scrollTop = document.documentElement.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (scrollTop / height) * 100;
   document.getElementById("progress-bar").style.width = scrolled + '%';
+});
+
+// Scroll Animination for Team Section
+const cards = document.querySelectorAll('.team-card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+cards.forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(30px)';
+  card.style.transition = '0.6s';
+});
+
+document.querySelectorAll('.icon').forEach(icon => {
+  icon.addEventListener('click', function(e) {
+    const circle = document.createElement('span');
+    const diameter = Math.max(this.clientWidth, this.clientHeight);
+
+    circle.style.width = circle.style.height = diameter + 'px';
+    circle.style.left = e.clientX - this.getBoundingClientRect().left - diameter / 2 + 'px';
+    circle.style.top = e.clientY - this.getBoundingClientRect().top - diameter / 2 + 'px';
+
+    this.appendChild(circle);
+
+    setTimeout(() => {
+      circle.remove();
+    }, 600);
+  });
+});
+
+document.addEventListener("click", function(e) {
+  if (e.target.matches('.img-box img')) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    lightbox.style.display = 'flex';
+    lightboxImg.src = e.target.src;
+  }
+})
+
+document.getElementById('lightbox').addEventListener('click', () => {
+  document.getElementById('lightbox').style.display = 'none';
 });

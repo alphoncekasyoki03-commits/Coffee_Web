@@ -6,12 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div id="loader">
-    <div class="spinner"></div>
-</div>
-
-<div id="progress-bar"></div>
+ <div id="progress-bar"></div>
     <header class="header">
         <div class="cart-icon" onclick="scrollToCart()">
             <span id="cart-count">0</span>
@@ -29,7 +24,8 @@
         <span></span>
         <span></span>
     </div>
-   </header><section class="home">
+   </header><div class="promo-badge"><strong>20% OFF ☕</strong></div>
+   <section class="home">
     <div class="overlay">
         <h1 class="fade-in">Premium Coffee Experience</h1>
         <p class="fade-in delay">Taste the difference in every sip!</p>
@@ -39,6 +35,6 @@
     <p>® 2026 Alma del Café</p>
    </footer>
    <div id="overlay-bg" onclick="toggleMenu()"></div>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

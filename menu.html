@@ -6,12 +6,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-<div id="loader">
-    <div class="spinner"></div>
-</div>
-
-<div id="progress-bar"></div>
+ <div id="progress-bar"></div>
     <header class="header">
         <div class="cart-icon" onclick="scrollToCart()">
             <span id="cart-count">0</span>
@@ -43,7 +38,7 @@
     <div class="menu-items">
 
         <div class="menu-item card" data-category="hot">
-            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Espresso">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&auto=format&compress" alt="Espresso" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Espresso</h3>
                 <p>Rich and bold, our espresso is the perfect pick-me-up.</p>
@@ -52,7 +47,7 @@
         </div>
 
         <div class="menu-item card" data-category="hot">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cappuccino">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&compress" alt="Cappuccino" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Cappuccino</h3>
                 <p>A harmonious blend of espresso, steamed milk, and froth.</p>
@@ -61,7 +56,7 @@
         </div>
 
         <div class="menu-item card" data-category="hot">
-            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" alt="Latte">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&auto=format&compress" alt="Latte" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Latte</h3>
                 <p>Smooth and creamy, our latte is a coffee lover's dream.</p>
@@ -70,7 +65,7 @@
         </div>
 
         <div class="menu-item card" data-category="special">
-            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" alt="Mocha">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&auto=format&compress" alt="Mocha" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Mocha</h3>
                 <p>A decadent blend of espresso, chocolate, and steamed milk.</p>
@@ -79,7 +74,7 @@
         </div>
 
         <div class="menu-item card" data-category="hot">
-            <img src="Americano.jpg" alt="Americano">
+            <img src="Americano.jpg" alt="Americano" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Americano</h3>
                 <p>Espresso diluted with hot water for a smooth, rich flavor.</p>
@@ -88,7 +83,7 @@
         </div>
 
         <div class="menu-item card" data-category="cold">
-            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Frappe">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&auto=format&compress" alt="Frappe" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy">
             <div class="card-body">
                 <h3>Frappe</h3>
                 <p>A refreshing blend of coffee, milk, ice, and syrup, or using an espresso base.</p>
@@ -106,6 +101,6 @@
         <p>© 2026 Alma del Café</p>
     </footer>
 <div id="overlay-bg" onclick="toggleMenu()"></div>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
